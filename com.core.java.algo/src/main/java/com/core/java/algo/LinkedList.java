@@ -20,6 +20,9 @@ public class LinkedList {
 	public static void main(String[] args) {
 		
 		LinkedList llist = new LinkedList();
+	
+		llist.head = new Node(1);
+		
 		/* Three nodes have been allocated  dynamically.
         We have refernces to these three blocks as first,  
         second and third
@@ -29,9 +32,10 @@ public class LinkedList {
            |                |                  |
        +----+------+     +----+------+     +----+------+
        | 1  | null |     | 2  | null |     |  3 | null |
+       +-----------+     +-----------+     +-----------+
        */
 		
-		llist.head = new Node(1);
+		Node second = new Node(2);
 		
 		/*   
 		 * llist.head        second              third
@@ -42,7 +46,7 @@ public class LinkedList {
        +----+------+     +----+------+     +----+------+ 
        
        */
-		Node second = new Node(2);
+		
 		Node third = new Node(3);
 
 		llist.head.next = second;
